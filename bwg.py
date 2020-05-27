@@ -80,7 +80,7 @@ class Stock:
         return profit
 
     def SendEmail(self):
-        with SMTP_SSL(host='smtp.live.com') as smtp:
+        with SMTP_SSL(host='smtp.office365.com') as smtp:
             smtp.login(user='li_jing_ok@hotmail.com', password='LJlj11!!')
 
             msg = MIMEText(f'请关注：{self.name} {self.ts_code}，当前处于盈利状态。', _charset="utf8")
