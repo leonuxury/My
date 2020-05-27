@@ -80,15 +80,15 @@ class Stock:
         return profit
 
     def SendEmail(self):
-        with SMTP_SSL(host='smtp.163.com') as smtp:
-            smtp.login(user='leonuxury@163.com', password='CYNSCENUTEBWTYVD')
+        with SMTP_SSL(host='smtp.hotmail.com') as smtp:
+            smtp.login(user='li_jing_ok@hotmail.com', password='LJlj11!!')
 
             msg = MIMEText(f'请关注：{self.name} {self.ts_code}，当前处于盈利状态。', _charset="utf8")
             msg["Subject"] = f'请关注 {self.name}，当前处于盈利状态。'
-            msg['From'] = 'leonuxury@163.com'  # 发送者
+            msg['From'] = 'li_jing_ok@hotmail.com'  # 发送者
             msg['To'] = '1005411336@qq.com'  # 接收者
 
-            smtp.sendmail(from_addr="leonuxury@163.com",
+            smtp.sendmail(from_addr="li_jing_ok@hotmail.com",
                           to_addrs=['1005411336@qq.com'],
                           msg=msg.as_string())
 
